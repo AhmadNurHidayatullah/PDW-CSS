@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    height: 100hv;
+    justify-content: center;
+    align-items: center;
+    background: #060604;
+    background: linear-gradient(to right, #000000, #575152, #050606);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin-block: 100rem;
+    gap: 100rem;
+}
+
+.card {
+    width: 550px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: clamp(25rem, calc(20rem + 2vw), 22rem);
+    overflow: hidden;
+    box-shadow: 0 0.1rem 23rem rgba(221, 237, 5, 0.1);
+    border-radius: 1em;
+    background: #040303;
+    background: linear-gradient(to right, #69695e, #c4c4a2);
+    background-color: rgb(83, 68, 42);
+}
+
+
+
+.card img {
+    width: 25rem; 
+}
+
+.card-body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+
+.tag {
+    align-self: flex-start;
+    padding: 0.25em 0.75em;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.tag+.tag {
+    margin-left: 0.5rem;
+}
+
+.tag-blue {
+    background: #9d9276;
+    background: linear-gradient(to bottom, #ded49d, #b6ac90);
+    color: #86816afa;
+}
+
+.card-body h4 {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+.card-footer {
+    display: flex;
+    padding: 4rem;
+    margin-top: auto;
+}
+
+.user {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.user-image {
+    border-radius: 100%;
+}
+
+.user-info>small {
+    color: #352828;
+}
