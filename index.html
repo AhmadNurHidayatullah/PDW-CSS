@@ -1,29 +1,72 @@
-<!--tipe dokumen HTML yang digunakan -->
 <!DOCTYPE html>
 <html lang="en">
-<!--  berisi informasi tentang dokumen, seperti metadata, tautan ke stylesheet, dan judul dokumen. -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
-    <title>pertemuan PDW 3</title>
-<!--  untuk menentukan gaya (styling) untuk elemen HTML dalam 
-    halaman. Pada kode di atas, gaya diterapkan 
-    secara langsung untuk elemen <h2>, mengatur ukuran font menjadi 16px.-->
+    <title>Pertemuan PDW 4</title>
     <style>
-      h2 {font-size : 16px}
+        h2 { font-size: 16px; }
+        body {
+            background-image: url('./assets/z.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 10;
+            padding: 90;
+            height: 200vh; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card {
+            background-color: rgba(255, 255, 255, 0.8); 
+            padding: 1px;
+            border-radius: 50px;
+        }
     </style>
 </head>
 <body>
-<!--berisi konten aktual yang akan ditampilkan di halaman web.-->
     <div class="card">
-        <img src="./assets/supra2.jpg" alt="supra" />
-        <div class = "This is supra">
-            <h1 style="color:rgb(63, 61, 57);"> Ini Toyota Supra 
-            </h1>
-            <h2 style="color:rgb(65, 48, 53);"> Toyota Supra adalah mobil sport berperforma tinggi yang diproduksi oleh Toyota Motor Corporation, Jepang dari tahun 1978 sampai 2002. Pada mulanya, Supra adalah versi mewah bermesin 6 silinder dari Toyota Celica.
-         </h2>
+        <img src="./assets/supra2.jpg" alt="Toyota Supra" />
+        <div class="supra-description">
+            <h1 style="color:rgb(63, 61, 57);">Ini Toyota Supra</h1>
+            <p id="Waktu"></p>
+            <h2 style="color:rgb(65, 48, 53);">Toyota Supra adalah mobil sport berperforma tinggi yang diproduksi oleh Toyota Motor Corporation, Jepang dari tahun 1978 sampai 2002. Pada mulanya, Supra adalah versi mewah bermesin 6 silinder dari Toyota Celica.</h2>
+            <div class="login-container">
+                <h2>Login</h2>
+                <form action="">
+                    <label for="Username">Username</label>
+                    <input type="text" id="Username" name="Username">
+                    <label for="Password">Password</label>
+                    <input type="password" id="Password" name="Password">
+                    <button onclick="sweetAlert()" type="submit">Login</button>
+                </form>
+            </div>
         </div>
     </div>
+    <script src="./script/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        function myFunction() {
+            alert("Menyala abangkuhhhhhh (emote api)");
+        }
+         
+    </script>
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            sweetAlert(); 
+        });
+
+
+        function sweetAlert() {
+            swal.fire({
+                title: "Login Success",
+                text: "Berhasil Login cuyyyyy!!",
+                icon: "Success"
+            });
+        } 
+     </script>
 </body>
 </html>
